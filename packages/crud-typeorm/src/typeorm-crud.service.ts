@@ -353,7 +353,7 @@ export class TypeOrmCrudService<T> extends CrudService<T, DeepPartial<T>> {
       const take = this.getTake(parsed, options.query);
       /* istanbul ignore else */
       if (isFinite(take)) {
-        builder.take(take);
+        builder.limit(take);
       }
 
       // set skip

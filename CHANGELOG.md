@@ -1,3 +1,10 @@
+## [5.1.3] - 2022-06-16
+
+### Fix 
+
+* 433b724 - Merge pull request #15 from Darkein/patch-1
+    Update typeorm-crud.service.ts, thanks to [Darkein](https://github.com/Darkein)
+  
 ## [5.1.2] - 2022-05-24
 
 ### Fix deps

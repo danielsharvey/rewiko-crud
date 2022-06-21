@@ -360,7 +360,7 @@ export class TypeOrmCrudService<T> extends CrudService<T, DeepPartial<T>> {
       const skip = this.getSkip(parsed, take);
       /* istanbul ignore else */
       if (isFinite(skip)) {
-        builder.offset(skip);
+        builder.skip(skip);
       }
     }
 

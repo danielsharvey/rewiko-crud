@@ -1,3 +1,9 @@
+## [5.1.4] - 2022-06-22
+
+### Fix 
+
+* c097531 - (darkein/patch-4) fix: use offset instead of skip, thanks to [Darkein](https://github.com/Darkein)
+
 ## [5.1.3] - 2022-06-16
 
 ### Fix 

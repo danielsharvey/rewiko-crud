@@ -353,14 +353,14 @@ export class TypeOrmCrudService<T> extends CrudService<T, DeepPartial<T>> {
       const take = this.getTake(parsed, options.query);
       /* istanbul ignore else */
       if (isFinite(take)) {
-        builder.limit(take);
+        builder.take(take);
       }
 
       // set skip
       const skip = this.getSkip(parsed, take);
       /* istanbul ignore else */
       if (isFinite(skip)) {
-        builder.offset(skip);
+        builder.skip(skip);
       }
     }
 
@@ -390,8 +390,8 @@ export class TypeOrmCrudService<T> extends CrudService<T, DeepPartial<T>> {
   ): Promise<GetManyDefaultResponse<T> | T[]> {
     if (this.decidePagination(query, options)) {
       const [data, total] = await builder.getManyAndCount();
-      const limit = builder.expressionMap.limit;
-      const offset = builder.expressionMap.offset;
+      const limit = builder.expressionMap.take;
+      const offset = builder.expressionMap.skip;
 
       return this.createPageInfo(data, total, limit || total, offset || 0);
     }

@@ -1,3 +1,9 @@
+## [5.1.10] - 2022-08-24
+
+### Fix 
+
+*  638c629 - fix(crud-typeorm): duplicate column selection <qpfmtlcp>
+
 ## [5.1.9] - 2022-07-17
 
 ### Fix 
